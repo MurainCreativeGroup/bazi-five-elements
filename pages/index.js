@@ -279,7 +279,7 @@ export default function Home() {
           className="w-full max-w-sm px-2 space-y-4"
         >
           <div className="relative w-full">
-            {/* Hidden Date Input Covering Entire Box */}
+            {/* Hidden Date Input */}
             <input
               id="customDateInput"
               type="date"
@@ -290,10 +290,17 @@ export default function Home() {
               className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
             />
 
-            {/* Visual Wrapper */}
-            <label
-              htmlFor="customDateInput"
+            {/* Visible Field */}
+            <div
               className="flex items-center bg-white rounded-[12px] px-4 py-3 w-full"
+              onClick={() => {
+                const input = document.getElementById("customDateInput");
+                if (input) {
+                  input.showPicker?.(); // ✅ Triggers date picker (if supported)
+                  input.focus(); // ✅ Ensures focus on desktop browsers
+                  input.click(); // ✅ Ensures manual triggering
+                }
+              }}
             >
               <span className="text-black font-bold whitespace-nowrap">
                 出生日期
@@ -310,7 +317,7 @@ export default function Home() {
                   className="h-2 w-2 text-gray-500"
                 />
               </div>
-            </label>
+            </div>
           </div>
 
           {/* 出生时辰 */}
