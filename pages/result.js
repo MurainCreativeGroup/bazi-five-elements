@@ -1,6 +1,8 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
+const { basePath } = useRouter();
+
 export default function Result() {
   const router = useRouter();
   const [data, setData] = useState(null);

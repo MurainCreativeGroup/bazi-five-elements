@@ -269,7 +269,7 @@ export default function Home() {
           alt="Bosch Logo"
         />
         <img
-          src={"${basePath}/header.png"}
+          src={`${basePath}/images/header.png`}
           className="w-full h-auto px-4 mb-12"
         />
 
