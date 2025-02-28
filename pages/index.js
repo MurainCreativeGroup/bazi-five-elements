@@ -278,29 +278,7 @@ export default function Home() {
           onSubmit={handleSubmit}
           className="w-full max-w-sm px-2 space-y-4"
         >
-          <div className="flex items-center bg-white rounded-[12px] px-4 py-3 relative w-full">
-            <span className="text-black font-bold whitespace-nowrap">
-              出生日期
-            </span>
-            <span className="mx-2 h-6 w-[1px] bg-gray-400"></span>{" "}
-            {/* Vertical divider */}
-            {/* Date Input */}
-            <div
-              className="flex items-center justify-between w-full cursor-pointer px-2"
-              // onClick={() =>
-              //   document.getElementById("customDateInput").showPicker()
-              // }
-            >
-              <span className="text-gray-800">
-                {birthdate ? birthdate : "请选择日期"}
-              </span>
-              {/* Arrow Icon */}
-              <img
-                src={`${basePath}/images/dropdown-icon.svg`}
-                alt="Dropdown Arrow"
-                className="absolute right-4 h-2 w-2 text-gray-500"
-              />
-            </div>
+          <div className="relative w-full">
             <input
               id="customDateInput"
               type="date"
@@ -308,8 +286,26 @@ export default function Home() {
               value={birthdate}
               onChange={(e) => setBirthdate(e.target.value)}
               required
-              className="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer z-10"
+              className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
             />
+
+            <div className="flex items-center bg-white rounded-[12px] px-4 py-3 relative w-full">
+              <span className="text-black font-bold whitespace-nowrap">
+                出生日期
+              </span>
+              <span className="mx-2 h-6 w-[1px] bg-gray-400"></span>
+
+              <div className="flex items-center justify-between w-full cursor-pointer px-2">
+                <span className="text-gray-800">
+                  {birthdate ? birthdate : "请选择日期"}
+                </span>
+                <img
+                  src={`${basePath}/images/dropdown-icon.svg`}
+                  alt="Dropdown Arrow"
+                  className="h-2 w-2 text-gray-500"
+                />
+              </div>
+            </div>
           </div>
 
           {/* 出生时辰 */}
