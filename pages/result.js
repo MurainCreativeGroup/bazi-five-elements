@@ -49,9 +49,8 @@ export default function Result() {
         />
         {/* Results Container */}
         <div
-          className="w-9/10 max-w-sm text-left bg-[url('${basePath}/images/box-bg.svg')] 
-    bg-contain bg-top bg-no-repeat min-h-[500px]  
-    px-8 py-12 mx-auto"
+          className="w-9/10 max-w-sm text-left bg-contain bg-top bg-no-repeat min-h-[500px] px-8 py-12 mx-auto"
+          style={{ backgroundImage: `url('${basePath}/images/box-bg.svg')` }}
         >
           <h2 className="font-bold text-lg text-center mb-4">计算结果</h2>
           <p className="mb-2 leading-relaxed">
