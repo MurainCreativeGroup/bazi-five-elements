@@ -37,11 +37,14 @@ export default function Result() {
     <div className="bg-custom min-h-screen flex flex-col items-center justify-center px-8">
       <div className="w-full max-w-[420px] mx-auto">
         <img
-          src={"${basePath}/bosch-logo.svg"}
+          src={`${basePath}/images/bosch-logo.svg`}
           className="absolute top-6 left-6 w-20 h-auto"
           alt="Bosch Logo"
         />
-        <img src={"/images/header-2.svg"} className="w-full h-auto px-8 py-6" />
+        <img
+          src={`${basePath}/images/header-2.svg`}
+          className="w-full h-auto px-8 py-6"
+        />
         {/* Results Container */}
         <div
           className="w-9/10 max-w-sm text-left bg-[url('/images/box-bg.svg')] 

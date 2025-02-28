@@ -264,7 +264,7 @@ export default function Home() {
       <div className="w-full max-w-[420px] mx-auto">
         {/* Logo */}
         <img
-          src={"${basePath}/bosch-logo.svg"}
+          src={`${basePath}/images/bosch-logo.svg`}
           className="absolute top-6 left-6 w-20 h-auto"
           alt="Bosch Logo"
         />
@@ -296,7 +296,7 @@ export default function Home() {
               </span>
               {/* Arrow Icon */}
               <img
-                src="/images/dropdown-icon.svg"
+                src={`${basePath}/images/dropdown-icon.svg`}
                 alt="Dropdown Arrow"
                 className="absolute right-4 h-2 w-2 text-gray-500"
               />
@@ -330,7 +330,7 @@ export default function Home() {
               </span>
               {/* Smaller Arrow Icon */}
               <img
-                src="/images/dropdown-icon.svg"
+                src={`${basePath}/images/dropdown-icon.svg`}
                 alt="Dropdown Arrow"
                 className="absolute right-4 h-2 w-2 text-gray-500"
               />
