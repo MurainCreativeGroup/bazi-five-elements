@@ -287,9 +287,9 @@ export default function Home() {
             {/* Date Input */}
             <div
               className="flex items-center justify-between w-full cursor-pointer px-2"
-              onClick={() =>
-                document.getElementById("customDateInput").showPicker()
-              }
+              // onClick={() =>
+              //   document.getElementById("customDateInput").showPicker()
+              // }
             >
               <span className="text-gray-800">
                 {birthdate ? birthdate : "请选择日期"}
@@ -308,7 +308,7 @@ export default function Home() {
               value={birthdate}
               onChange={(e) => setBirthdate(e.target.value)}
               required
-              className="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer"
+              className="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer z-10"
             />
           </div>
 
