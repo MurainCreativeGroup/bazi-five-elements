@@ -290,15 +290,19 @@ export default function Home() {
               className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
             />
 
-            {/* Visible Field */}
+            {/* Visible Field (Click Anywhere to Trigger Date Picker) */}
             <div
-              className="flex items-center bg-white rounded-[12px] px-4 py-3 w-full"
-              onClick={() => {
+              className="flex items-center bg-white rounded-[12px] px-4 py-3 w-full cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault(); // Prevent weird default behavior
                 const input = document.getElementById("customDateInput");
                 if (input) {
-                  input.showPicker?.(); // ✅ Triggers date picker (if supported)
-                  input.focus(); // ✅ Ensures focus on desktop browsers
-                  input.click(); // ✅ Ensures manual triggering
+                  if (input.showPicker) {
+                    input.showPicker(); // ✅ Triggers picker on supported browsers
+                  } else {
+                    input.focus(); // ✅ Ensures focus on desktop
+                    input.click(); // ✅ Ensures manual triggering on iOS
+                  }
                 }
               }}
             >
