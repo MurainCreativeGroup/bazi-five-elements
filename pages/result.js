@@ -49,7 +49,7 @@ export default function Result() {
         />
         {/* Results Container */}
         <div
-          className="w-9/10 max-w-sm text-left bg-[url('/images/box-bg.svg')] 
+          className="w-9/10 max-w-sm text-left bg-[url('${basePath}/images/box-bg.svg')] 
     bg-contain bg-top bg-no-repeat min-h-[500px]  
     px-8 py-12 mx-auto"
         >

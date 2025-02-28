@@ -106,8 +106,8 @@ button:hover {
 }
 
 .bg-custom {
-  background-image: url("../public/images/background.png");
-  background-size: 100% 100%; /* ✅ Stretches to fit screen without overflow */
+  background-image: url("../public/images/background.webp");
+  background-size: cover; /* ✅ Stretches to fit screen without overflow */
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh; /* ✅ Full viewport height */
