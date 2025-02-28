@@ -8,6 +8,8 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
+  const { basePath } = useRouter();
+
   // **Mapping of Five Elements (五行)**
   const fiveElements = {
     木: ["甲", "乙", "寅", "卯"],
@@ -262,11 +264,14 @@ export default function Home() {
       <div className="w-full max-w-[420px] mx-auto">
         {/* Logo */}
         <img
-          src="/images/bosch-logo.svg"
+          src={"${basePath}/bosch-logo.svg"}
           className="absolute top-6 left-6 w-20 h-auto"
           alt="Bosch Logo"
         />
-        <img src="/images/header.png" className="w-full h-auto px-4 mb-12" />
+        <img
+          src={"${basePath}/header.png"}
+          className="w-full h-auto px-4 mb-12"
+        />
 
         {/* Form Container */}
         <form
