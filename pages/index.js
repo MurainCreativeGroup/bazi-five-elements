@@ -308,7 +308,7 @@ export default function Home() {
               value={birthdate}
               onChange={(e) => setBirthdate(e.target.value)}
               required
-              className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+              className="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer"
             />
           </div>
 
@@ -340,7 +340,7 @@ export default function Home() {
               value={birthtime}
               onChange={(e) => setBirthtime(e.target.value)}
               required
-              className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+              className="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer"
             >
               <option value="">请选择出生时辰</option>
               <option value="子时">子时 23:00-00:59</option>

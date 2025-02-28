@@ -20,15 +20,6 @@ body {
   --primary-hover: #0056b3;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #121212;
-    --foreground: #ededed;
-    --card-bg: #1e1e1e;
-    --border-color: #444;
-  }
-}
-
 /* Apply global styles */
 body {
   color: var(--foreground);
