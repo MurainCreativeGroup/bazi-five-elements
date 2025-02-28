@@ -308,7 +308,7 @@ export default function Home() {
               value={birthdate}
               onChange={(e) => setBirthdate(e.target.value)}
               required
-              className="absolute opacity-0 inset-0 w-0 h-0"
+              className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
             />
           </div>
 
