@@ -193,6 +193,18 @@ export default function Home() {
     return timePillarTable[dayGan]?.[timeIndex] || "未知";
   }
 
+  const handleDateClick = (e) => {
+    e.preventDefault();
+    const input = document.getElementById("customDateInput");
+    if (input) {
+      input.focus();
+      input.click();
+      if (typeof input.showPicker === "function") {
+        input.showPicker();
+      }
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -283,43 +295,31 @@ export default function Home() {
             <input
               id="customDateInput"
               type="date"
-              lang="zh-CN"
               value={birthdate}
               onChange={(e) => setBirthdate(e.target.value)}
               required
               className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+              style={{ touchAction: "none" }} // Prevents unwanted gestures
             />
 
-            {/* Visible Field (Click Anywhere to Trigger Date Picker) */}
             <div
               className="flex items-center bg-white rounded-[12px] px-4 py-3 w-full cursor-pointer"
-              onClick={(e) => {
-                e.preventDefault(); // Prevent weird default behavior
-                const input = document.getElementById("customDateInput");
-                if (input) {
-                  if (input.showPicker) {
-                    input.showPicker(); // ✅ Triggers picker on supported browsers
-                  } else {
-                    input.focus(); // ✅ Ensures focus on desktop
-                    input.click(); // ✅ Ensures manual triggering on iOS
-                  }
-                }
-              }}
+              onClick={handleDateClick}
+              style={{ touchAction: "manipulation" }}
             >
-              <span className="text-black font-bold whitespace-nowrap">
-                出生日期
-              </span>
-              <span className="mx-2 h-6 w-[1px] bg-gray-400"></span>
-
-              <div className="flex items-center justify-between w-full px-2">
-                <span className="text-gray-800">
-                  {birthdate ? birthdate : "请选择日期"}
-                </span>
-                <img
-                  src={`${basePath}/images/dropdown-icon.svg`}
-                  alt="Dropdown Arrow"
-                  className="h-2 w-2 text-gray-500"
-                />
+              <div className="flex-1 flex items-center">
+                <span className="text-black font-bold">出生日期</span>
+                <span className="mx-2 h-6 w-[1px] bg-gray-400"></span>
+                <div className="flex-1 flex items-center justify-between px-2">
+                  <span className="text-gray-800">
+                    {birthdate ? birthdate : "请选择日期"}
+                  </span>
+                  <img
+                    src={`${basePath}/images/dropdown-icon.svg`}
+                    alt="Dropdown Arrow"
+                    className="h-2 w-2 text-gray-500"
+                  />
+                </div>
               </div>
             </div>
           </div>
