@@ -97,7 +97,7 @@ button:hover {
 }
 
 .bg-custom {
-  background-image: url("https://cdn.jsdelivr.net/gh/MurainCreativeGroup/bazi-five-elements/public/images/background.svg");
+  background-image: url("https://cdn.jsdelivr.net/gh/MurainCreativeGroup/bazi-five-elements/public/images/background_new.webp");
   background-size: cover; /* ✅ Stretches to fit screen without overflow */
   background-position: center;
   background-repeat: no-repeat;
