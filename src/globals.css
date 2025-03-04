@@ -98,7 +98,7 @@ button:hover {
 
 .bg-custom {
   background-image: url("https://cdn.jsdelivr.net/gh/MurainCreativeGroup/bazi-five-elements/public/images/background_new2.webp");
-  background-size: cover; /* ✅ Stretches to fit screen without overflow */
+  background-size: 100% 100%; /* ✅ Stretches to fit screen without overflow */
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh; /* ✅ Full viewport height */
